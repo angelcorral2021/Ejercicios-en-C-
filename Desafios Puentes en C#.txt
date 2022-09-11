@@ -1,0 +1,47 @@
+﻿using System;
+
+class program
+{
+    static void Main()
+    {
+
+
+       
+        int intAcumulador = 0;
+        string strPuentes;
+
+        for (int i = 1; i <= 7; i++)
+        {
+            Console.WriteLine($"Ingrese el estado del puente numero {i} (1: operativo /0: no operativo)");
+            strPuentes = Console.ReadLine();
+            intAcumulador += Convert.ToInt32(strPuentes);
+
+            if(i == 2 && Convert.ToInt32(strPuentes) == 1)
+            {
+                intAcumulador++;
+            }
+            else if(i == 3 && intAcumulador == 0)
+            {
+                Console.WriteLine("puentes habilitados : " + intAcumulador);
+                break;
+
+            }
+            else if (i == 5 && intAcumulador == 1)
+            {
+                Console.WriteLine("puentes habilitados solo " + intAcumulador + "  no es posible transitar");
+                break;
+
+            }
+            else if (i == 7 && intAcumulador == 2)
+            {
+                Console.WriteLine("puentes habilitados solo " + intAcumulador + "  no es posible transitar");
+                break;
+            }
+           
+        }
+     if (intAcumulador > 2)
+        {
+            Console.WriteLine("Puentes habilitados, puede pasar");
+        }
+    }
+}
