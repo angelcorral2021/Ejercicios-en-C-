@@ -1,2 +1,2 @@
-# Ejercicios-en-C-
+# Ejercicios en C#
 Ejercicios Taller Programación AIEP
